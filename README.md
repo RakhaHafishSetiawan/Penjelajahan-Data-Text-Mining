@@ -3,3 +3,4 @@
 
 
 # Analisis-Teks
+repositori ini berisi hasil dari analisis teks dengan penerapan metode text mining dari sebuah artikel ilmiah yang berjudul "Paradigma Analisis Wacana dalam Memahami Teks dan Konteks Untuk Meningkatkan Kemampuan". 
