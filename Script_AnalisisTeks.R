@@ -2,7 +2,6 @@
 library(tidyverse)
 library(pdftools)
 library(tm)
-library(wordcloud)
 library(RColorBrewer)
 
 #Kreasi Korpora Teks dan Pembersihan Data
