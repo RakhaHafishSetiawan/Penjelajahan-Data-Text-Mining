@@ -1,7 +1,7 @@
 ![Screenshot (420)](https://user-images.githubusercontent.com/102712597/204098419-b783a61e-5490-4745-97a5-36bb80298739.png)
 
 # Analisis Teks / Text Analysis
-• Repositori ini berisi hasil dari penjelajahan data hasil text mining dari sebuah artikel ilmiah yang berjudul "Paradigma Analisis Wacana dalam Memahami Teks dan Konteks Untuk Meningkatkan Kemampuan". <br>
+• Repositori ini berisi hasil dari analisis data eksplorasi dari data penambangan teks dari sebuah artikel ilmiah yang berjudul "Paradigma Analisis Wacana dalam Memahami Teks dan Konteks Untuk Meningkatkan Kemampuan". <br>
 • This repository contains the results of exploratory data analysis of a text mining data from a scientific article entitled "Paradigm of Discourse Analysis in Understanding Text and Context to Improve Ability"
 
 # Aplikasi / Tools
