@@ -36,14 +36,14 @@ textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Per
     tm_map(removeWords, ENGStop)
     
 # Pengubahan korpora teks menjadi Matriks Data dan Bingkai Data / Converting corpora text to Data Matrix and Data Frame
-DataMatrix <- textCorpus %>%
+DataMatrix = textCorpus %>%
   DocumentTermMatrix() %>%
   as.matrix() %>%
   t() %>%
   rowSums() %>%
   sort(decreasing = TRUE)
 
-DataFrame <- data.frame(names(DataMatrix), DataMatrix) %>%
+DataFrame = data.frame(names(DataMatrix), DataMatrix) %>%
    select(everything()) %>%
     mutate(rank = row_number()) %>%      
     rename(term = names.DataMatrix.) %>%
@@ -79,14 +79,14 @@ textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Per
     tm_map(removeNumbers) 
 
 # Pengubahan korpora teks menjadi Matriks Data dan Bingkai Data / Converting corpora text to Data Matrix and Data Frame
-DataMatrix <- textCorpus %>%
+DataMatrix = textCorpus %>%
   DocumentTermMatrix() %>%
   as.matrix() %>%
   t() %>%
   rowSums() %>%
   sort(decreasing = TRUE)
 
-DataFrame <- data.frame(names(DataMatrix), DataMatrix) %>%
+DataFrame = data.frame(names(DataMatrix), DataMatrix) %>%
    select(everything()) %>%
     mutate(rank = row_number()) %>%      
     rename(term = names.DataMatrix.) %>%
