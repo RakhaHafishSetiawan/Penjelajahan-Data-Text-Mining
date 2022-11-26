@@ -67,8 +67,8 @@ tibble(DataFrame)
 10 kekuasaan         19    10
 # … with 837 more rows
 ```
-## Memperoleh Data Istilah / Obtaining Term Data
-• Setelah memperoleh data frekuensi istilah, selanjutnya adalah proses memperoleh residu data yang tersaring oleh bongkahan kode sebelumnya. Residu ini adalah sebuah data dari stopword beserta frekuensinya. Cara kerja dari bongkahan kode berikut adalah menggabungkan data korpora teks yang belum tersaring stopwordnya dengan data set yang mengandung berbagai stopword dari bahasa Indonesia dan Bahasa Inggris.
+## Memperoleh Data Stopword / Obtaining Stopword Data
+• Setelah memperoleh data frekuensi istilah, selanjutnya adalah proses memperoleh residu data yang tersaring oleh bongkahan kode sebelumnya. Residu ini adalah sebuah data dari stopword beserta frekuensinya. Cara kerja dari bongkahan kode berikut adalah menggabungkan data korpora teks yang belum tersaring stopwordnya dengan data set yang mengandung berbagai stopword dari bahasa Indonesia dan Bahasa Inggris. <br>
 • After obtaining term frequency data, the next step is the process of obtaining the remaining data that is filtered by the previous chunk code. This residue is a data from the stopword and its frequency. The way the following code snippets work is to combine text corpora data that has not been filtered for stopwords with a data set that contains various stopwords from Indonesian and English.
 ```r
 textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Pertemuan10.pdf"))) %>%
