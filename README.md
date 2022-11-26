@@ -21,7 +21,7 @@ library(tm)
 ```
 
 # Kode Transformasi Data / Data Transformation Code
-## Memperoleh Data Istilah / Obtaining Term Data
+## Memperoleh Data Frekuensi Istilah / Obtaining Term Frequency Data
 • Dalam pengubahan file .pdf yang termasuk dalam jenis data tidak terstruktur menjadi data yang terstruktur, pdftools digunakan untuk membaca format file .pdf, setelah itu digunakan tm untuk membersihkan korpora teks dari residu-residu data yang tidak diinginkan seperti kata angka dan kata konjungsi. Resultan dari transformasi ini adalah bingkai data yang mengandung data istilah beserta frekuensi kemunculannya<br>
 • In converting .pdf files belonging to the unstructured data type into structured data, pdftools was used to read files in .pdf format, after which tm is used to clean the text corpora from unwanted data residues such as numbers and stopwords. The resultant of this transformation is a data frame containing the term data and the frequency with which it occurs<br>
 
@@ -67,6 +67,34 @@ tibble(DataFrame)
 10 kekuasaan         19    10
 # … with 837 more rows
 ```
+## Memperoleh Data Istilah / Obtaining Term Data
+• Setelah memperoleh data frekuensi istilah, selanjutnya adalah proses memperoleh residu data yang tersaring oleh bongkahan kode sebelumnya. Residu ini adalah sebuah data dari stopword beserta frekuensinya. Cara kerja dari bongkahan kode berikut adalah menggabungkan data korpora teks yang belum tersaring stopwordnya dengan data set yang mengandung berbagai stopword dari bahasa Indonesia dan Bahasa Inggris.
+• After obtaining term frequency data, the next step is the process of obtaining the remaining data that is filtered by the previous chunk code. This residue is a data from the stopword and its frequency. The way the following code snippets work is to combine text corpora data that has not been filtered for stopwords with a data set that contains various stopwords from Indonesian and English.
+```r
+textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Pertemuan10.pdf"))) %>%
+    tm_map(tolower) %>%
+    tm_map(removePunctuation) %>%
+    tm_map(stripWhitespace) %>%
+    tm_map(removeNumbers) 
 
+DataMatrix <- textCorpus %>%
+  DocumentTermMatrix() %>%
+  as.matrix() %>%
+  t() %>%
+  rowSums() %>%
+  sort(decreasing = TRUE)
+
+DataFrame <- data.frame(names(DataMatrix), DataMatrix) %>%
+   select(everything()) %>%
+    mutate(rank = row_number()) %>%      
+    rename(term = names.DataMatrix.) %>%
+    rename(frequency = DataMatrix)
+
+MyStopwords = data.frame(c(IDNStop, ENGStop)) %>% 
+  rename(term=c.IDNStop..ENGStop.)
+
+StopwordData2 = DataFrame %>% 
+  inner_join(MyStopwords, by = NULL)
+```
 # Kreator / Creator
 • Rakha Hafish Setiawan @ Universitas Brawijaya
