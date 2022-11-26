@@ -21,7 +21,8 @@ library(pdftools)
 library(tm)
 ```
 
-## Kode Transformasi Data / Data Transformation Code
+# Kode Transformasi Data / Data Transformation Code
+## Memperoleh Data Istilah / Obtaining Term Data
 • Dalam pengubahan file .pdf yang termasuk dalam jenis data tidak terstruktur menjadi data yang terstruktur, pdftools digunakan untuk membaca format file .pdf, setelah itu digunakan tm untuk membersihkan korpora teks dari residu-residu data yang tidak diinginkan seperti kata angka dan kata konjungsi. Resultan dari transformasi ini adalah bingkai data yang mengandung data istilah beserta frekuensi kemunculannya<br>
 • In converting .pdf files belonging to the unstructured data type into structured data, pdftools was used to read files in .pdf format, after which tm is used to clean the text corpora from unwanted data residues such as numbers and stopwords. The resultant of this transformation is a data frame containing the term data and the frequency with which it occurs<br>
 
