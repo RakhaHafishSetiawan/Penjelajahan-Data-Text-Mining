@@ -26,6 +26,7 @@ library(tm)
 • In converting .pdf files belonging to the unstructured data type into structured data, pdftools was used to read files in .pdf format, after which tm is used to clean the text corpora from unwanted data residues such as numbers and stopwords. The resultant of this transformation is a data frame containing the term data and the frequency with which it occurs<br>
 
 ```r
+# Pengubahan file .pdf menjadi korpora teks / Converting .pdf files to text corpora
 textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Pertemuan10.pdf"))) %>%
     tm_map(tolower) %>%
     tm_map(removePunctuation) %>%
@@ -34,6 +35,7 @@ textCorpus = Corpus(VectorSource(pdf_text("C:/Users/Rakha Hafish S/Downloads/Per
     tm_map(removeWords, IDNStop) %>%
     tm_map(removeWords, ENGStop)
     
+# Pengubahan korpora teks menjadi Matriks Data dan Bingkai Data / Converting corpora text to Data Matrix and Data Frame
 DataMatrix <- textCorpus %>%
   DocumentTermMatrix() %>%
   as.matrix() %>%
