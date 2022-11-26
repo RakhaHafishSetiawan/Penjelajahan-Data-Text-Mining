@@ -99,5 +99,24 @@ MyStopwords = data.frame(c(IDNStop, ENGStop)) %>%
 StopwordData2 = DataFrame %>% 
   inner_join(MyStopwords, by = NULL)
 ```
+
+## Resultan Skrip / Script Resultant
+```r
+tibble(StopwordData2)
+# A tibble: 236 × 3
+   term     frequency  rank
+   <chr>        <dbl> <int>
+ 1 yang           117     2
+ 2 dan            102     3
+ 3 dalam           84     4
+ 4 dengan          54     6
+ 5 sebagai         50     7
+ 6 itu             40     9
+ 7 dari            35    10
+ 8 pada            33    12
+ 9 tersebut        33    13
+10 the             31    15
+# … with 226 more rows
+```
 # Kreator / Creator
 • Rakha Hafish Setiawan @ Universitas Brawijaya
