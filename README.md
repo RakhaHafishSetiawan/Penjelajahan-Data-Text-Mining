@@ -8,14 +8,13 @@
 • R Language <br>
 • Microsoft Power BI
 
-# Pengolahan Data / Data Processing
-
-## Library yang Dibutuhkan / Required Libraries
+# Library yang Dibutuhkan / Required Libraries
  • Untuk dapat mengubah data yang tidak terstruktur, seperti file .pdf menjadi kumpulan data terstruktur, selain menggunakan sistem yang biasa, saya harus menggunakan library R seperti pdftools untuk mengubah file .pdf menjadi korpora teks dan tm untuk membersihkan dan mengubah kumpulan teks menjadi bingkai data yang dapat dikelola. <br>
 • To be able to transform an unstructured data, such as the .pdf file into a structured data set, besides using the usual tidyverse, i had to use R libraries such as pdftools to convert .pdf file into a textcorpora and tm to clean and transform the text corpora into a manageable data frame.
 
 ```r
 library(dplyr)
+library(tibble)
 library(magrittr)
 library(pdftools)
 library(tm)
