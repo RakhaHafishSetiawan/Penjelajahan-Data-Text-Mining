@@ -5,7 +5,7 @@
 • This repository contains the results of exploratory data analysis of a text mining data from a scientific article entitled "Paradigm of Discourse Analysis in Understanding Text and Context to Improve Ability"
 
 # Aplikasi / Tools
-• R Language <br>
+• R Programming Language <br>
 • Microsoft Power BI
 
 # Library yang Dibutuhkan / Required Libraries
