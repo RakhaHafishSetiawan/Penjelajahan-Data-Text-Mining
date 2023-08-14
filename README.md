@@ -13,11 +13,10 @@
 • To be able to transform an unstructured data, such as the .pdf file into a structured data set, besides using the usual tidyverse, i had to use R libraries such as pdftools to convert .pdf file into a textcorpora and tm to clean and transform the text corpora into a manageable data frame.
 
 ```r
-library(dplyr)
-library(tibble)
-library(magrittr)
+library(tidyverse)
 library(pdftools)
 library(tm)
+library(tibble)
 ```
 
 # Kode Transformasi Data / Data Transformation Code
