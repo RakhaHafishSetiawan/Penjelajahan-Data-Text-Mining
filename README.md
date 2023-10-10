@@ -118,7 +118,7 @@ tibble(StopwordData2)
 # … with 226 more rows
 ```
 # Artikel Ilmiah yang Digunakan / Scientific Article Used
-Juliantari, Ni Kadek. 2017. <i> Paradigma Analisis Wacana Dalam Memahami Teks Dan Konteks Untuk Meningkatkan Kemampuan Membaca Pemahaman </i>. <i> Acarya Pustaka Vo.3, No.1, Juni 2017 </i>
+• Juliantari, Ni Kadek. 2017. <i> Paradigma Analisis Wacana Dalam Memahami Teks Dan Konteks Untuk Meningkatkan Kemampuan Membaca Pemahaman </i>. <i> Acarya Pustaka Vo.3, No.1, Juni 2017 </i>
 
 # Kreator / Creator
 • Rakha Hafish Setiawan @ Universitas Brawijaya
